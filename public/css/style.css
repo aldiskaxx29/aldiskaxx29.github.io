@@ -1,0 +1,25 @@
+body {
+    overflow-x: hidden;
+}
+.jumbotron {
+    padding: 0;
+    padding-top: 13rem;
+    background-color: #ffdead;
+}
+
+#project {
+    background-color: #ffdead;
+    /* margin-bottom: 10px; */
+}
+.card {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    #project {
+        background-color: red;
+    }
+    .md {
+        margin: 0 auto;
+    }
+}
