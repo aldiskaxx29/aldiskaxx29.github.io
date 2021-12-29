@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>My Portfolio | Aldi</title>
   </head>
   <body>
@@ -25,17 +27,20 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
-                <li class="nav-item active mr-2">
+                <li class="nav-item active mr-3">
                   <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white mr-2" href="#about">About</a>
+                  <a class="nav-link text-white mr-3" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white mr-2" href="#project">Product</a>
+                  <a class="nav-link text-white mr-3" href="#project">Product</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#contact">Contact</a>
+                  <a class="nav-link text-white mr-3" href="#contact">Contact</a>
+                </li>
+                <li>
+                    <a href="https://github.com/aldiskaxx29" class="nav-link text-white font-weight-bold">Github</a>
                 </li>
               </ul>
             </div>
@@ -194,21 +199,31 @@
                 </div>
                 <div class="col-md-4 mb-3" data-aos="zoom-in-up" data-aos-duration="2000">
                     <div class="card">
-                        <img src="{{ url('img/koperasi.jpeg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <strong>Aplikasi Jamaah Haji</strong>
-                            <hr>
-                            <small>Aplikasi Jamaah Haji dibuat meggunakan Codeigniter 3</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3" data-aos="zoom-in-up" data-aos-duration="2000">
-                    <div class="card">
                         <img src="{{ url('img/tk.jpeg') }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <strong>Aplikasi Toko Online</strong>
                             <hr>
                             <small>Aplikasi Toko Online dibuat meggunakan Laravel</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3" data-aos="zoom-in-up" data-aos-duration="2000">
+                    <div class="card">
+                        <img src="{{ url('img/pengaduan.jpeg') }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <strong>Aplikasi Laporan Kehilangan Barang</strong>
+                            <hr>
+                            <small>Aplikasi Laporan Kehilangan Barang dibuat meggunakan Laravel</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3" data-aos="zoom-in-up" data-aos-duration="2000">
+                    <div class="card">
+                        <img src="{{ url('img/haji.jpeg') }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <strong>Aplikasi Jamaah Haji / Umrah</strong>
+                            <hr>
+                            <small>Aplikasi Jamaah Haji / Umrah dibuat meggunakan Codeigniter</small>
                         </div>
                     </div>
                 </div>
@@ -228,7 +243,8 @@
             </div>
             <div class="row justify-content-center mt-3 mb-2" data-aos="zoom-in-up" data-aos-duration="2000">
                 <div class="col-md-8">
-                    <form action="">
+                    <form action="{{ url('kirim-email') }}" method="POST">
+                        @csrf
                         <div class="form-group">
                             <label for="nama">Nama Lengkap</label>
                             <input type="text" name="nama" id="nama" class="form-control" placeholder="Masukan Nama Anda">
@@ -243,6 +259,19 @@
                         </div>
                         <button type="submit" class="btn btn-warning">Kirim</button>
                     </form>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="md-3">
+                            {{-- <i class="fas fa-whatsapp"></i> --}}
+                        </div>
+                        <div class="md-3"></div>
+                        <div class="md-3"></div>
+                        <div class="md-3"></div>
+                    </div>
                 </div>
             </div>
         </div>
